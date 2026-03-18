@@ -39,6 +39,7 @@
             color: #fff;
             outline: none;
             transition: all 0.2s;
+            text-align: center;
         }
 
         .mil-input:focus {
@@ -69,22 +70,10 @@
 
     <div class="max-w-xl mx-auto relative">
         
-        <!-- Header Section -->
-        <div class="flex justify-between items-center mb-10 px-2">
-            <!-- Right side empty -->
-            <div class="w-16"></div>
-            
-            <div class="text-center flex-1">
-                <h2 class="text-blue-500 font-black text-3xl tracking-widest">הפלוגה הייעודית</h2>
-                <p class="text-white text-xl font-black italic tracking-[0.2em] mt-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]">RAMBO</p>
-            </div>
-
-            <!-- סמל היחידה מהתמונה שהעלית -->
-            <div class="w-24 h-24 flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/he/thumb/3/36/414_Logo.png/240px-414_Logo.png" 
-                     alt="סמל פלוגה" 
-                     class="max-h-full drop-shadow-[0_0_15px_rgba(59,130,246,0.6)] object-contain">
-            </div>
+        <!-- Header Section - Centered without logo -->
+        <div class="text-center mb-10 px-2">
+            <h2 class="text-blue-500 font-black text-3xl tracking-widest uppercase">הפלוגה הייעודית</h2>
+            <p class="text-white text-xl font-black italic tracking-[0.2em] mt-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]">RAMBO</p>
         </div>
 
         <div class="glass-card rounded-[2.5rem] overflow-hidden relative">
@@ -96,18 +85,18 @@
             <div class="p-6 space-y-8 border-b border-white/5">
                 <div>
                     <label class="text-[10px] font-black text-blue-400 block mb-2 px-1 uppercase tracking-widest text-right">משימה / גזרה / אירוע</label>
-                    <input type="text" id="missionName" class="mil-input w-full p-4 rounded-2xl font-black text-lg text-right" placeholder="הזן נתוני משימה...">
+                    <input type="text" id="missionName" class="mil-input w-full p-4 rounded-2xl font-black text-lg" placeholder="הזן נתוני משימה...">
                 </div>
 
-                <!-- Date & Time Centered -->
+                <!-- Date & Time - Centered Layout -->
                 <div class="flex flex-row justify-center items-end gap-6 w-full">
                     <div class="w-1/2 max-w-[180px]">
                         <label class="text-[10px] font-black text-blue-400 block mb-2 px-1 uppercase tracking-widest text-center">תאריך</label>
-                        <input type="date" id="missionDate" class="mil-input w-full p-3 rounded-2xl text-sm font-bold text-center">
+                        <input type="date" id="missionDate" class="mil-input w-full p-3 rounded-2xl text-sm font-bold">
                     </div>
                     <div class="w-1/3 max-w-[130px]">
                         <label class="text-[10px] font-black text-blue-400 block mb-2 px-1 uppercase tracking-widest text-center">שעה</label>
-                        <input type="time" id="missionTime" class="mil-input w-full p-3 rounded-2xl text-sm font-bold text-center">
+                        <input type="time" id="missionTime" class="mil-input w-full p-3 rounded-2xl text-sm font-bold">
                     </div>
                 </div>
             </div>
@@ -115,7 +104,7 @@
             <!-- Checklist -->
             <div class="p-6">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-1.5 h-6 bg-blue-500 rounded-full"></div>
+                    <div class="w-1.5 h-6 bg-blue-500 rounded-full shadow-[0_0_10px_#3b82f6]"></div>
                     <h3 class="text-lg font-black text-white uppercase tracking-tighter">ציר קשר ותקשורת</h3>
                 </div>
                 <div id="itemsList" class="space-y-3"></div>
@@ -131,11 +120,11 @@
             <div class="p-6 bg-black/40 flex flex-row gap-4 border-t border-white/10">
                 <div class="flex-1">
                     <label class="text-[10px] font-bold text-slate-500 block mb-2 px-1 uppercase text-center">קשר יוצא</label>
-                    <input type="text" id="outSign" class="mil-input w-full p-4 rounded-xl text-xs font-bold text-center" placeholder="שם">
+                    <input type="text" id="outSign" class="mil-input w-full p-4 rounded-xl text-xs font-bold" placeholder="שם">
                 </div>
                 <div class="flex-1">
                     <label class="text-[10px] font-bold text-slate-500 block mb-2 px-1 uppercase text-center">קשר נכנס</label>
-                    <input type="text" id="inSign" class="mil-input w-full p-4 rounded-xl text-xs font-bold text-center" placeholder="שם">
+                    <input type="text" id="inSign" class="mil-input w-full p-4 rounded-xl text-xs font-bold" placeholder="שם">
                 </div>
             </div>
         </div>
@@ -147,7 +136,7 @@
                 <span id="pctText" class="text-3xl font-black text-white italic">0%</span>
             </div>
             <div class="w-full h-4 bg-slate-950 rounded-full border border-white/10 p-1">
-                <div id="pctBar" class="h-full bg-blue-600 rounded-full transition-all duration-700" style="width: 0%"></div>
+                <div id="pctBar" class="h-full bg-blue-600 rounded-full transition-all duration-700 shadow-[0_0_15px_rgba(37,99,235,0.5)]" style="width: 0%"></div>
             </div>
         </div>
     </div>
@@ -166,7 +155,7 @@
             "תדרים : וידוא תדר גזרתי, תדר פלוגתי ותדר מנמרים",
             "אנטנות : תקינות כבלים, חיבורים ואנטנות חיצוניות",
             "אנרגיה : מלאי סוללות טעונות ספייר למכשירי קשר",
-            "דף קשר : אוקים מעודכנים+פק\"לי צ",
+            "דף קשר : אוקים מעודכנים ופקל״צ",
             "שמיעה : ביצוע בדיקת קשר מול החמ\"ל הרלוונטי"
         ];
 
@@ -186,9 +175,9 @@
                 const row = document.createElement('div');
                 row.onclick = () => { item.checked = !item.checked; renderUI(); };
                 row.className = `flex items-center gap-5 p-5 rounded-2xl border-2 transition-all cursor-pointer select-none ${
-                    item.checked ? 'bg-blue-600/25 border-blue-500' : 'bg-white/5 border-white/5'
+                    item.checked ? 'bg-blue-600/25 border-blue-500 shadow-[inset_0_0_15px_rgba(59,130,246,0.1)]' : 'bg-white/5 border-white/5 hover:bg-white/10'
                 }`;
-                row.innerHTML = `<div class="custom-checkbox ${item.checked ? 'checked' : ''}">${item.checked ? '✓' : ''}</div><span class="text-[16px] text-right ${item.checked ? 'text-white font-black' : 'text-slate-400 font-bold'}">${item.text}</span>`;
+                row.innerHTML = `<div class="custom-checkbox ${item.checked ? 'checked' : ''}">${item.checked ? '<span class="text-white font-black">✓</span>' : ''}</div><span class="text-[16px] text-right ${item.checked ? 'text-white font-black' : 'text-slate-400 font-bold'}">${item.text}</span>`;
                 list.appendChild(row);
             });
             const done = state.filter(s => s.checked).length;
@@ -198,7 +187,16 @@
         }
 
         function sendReport() {
-            const msg = `*--- חפיפה מבצעית: RAMBO ---*\n📍 *משימה:* ${document.getElementById('missionName').value || "לא צוין"}\n⏰ *זמן:* ${document.getElementById('missionDate').value} | ${document.getElementById('missionTime').value}\n\n*סטטוס:* \n${state.map(i => `${i.checked ? '✅' : '❌'} ${i.text}`).join('\n')}\n\n📝 *הערות:* ${document.getElementById('notes').value || "אין"}`;
+            const mName = document.getElementById('missionName').value || "לא צוין";
+            const mDate = document.getElementById('missionDate').value;
+            const mTime = document.getElementById('missionTime').value;
+            const mNotes = document.getElementById('notes').value || "אין";
+            const sOut = document.getElementById('outSign').value || "---";
+            const sIn = document.getElementById('inSign').value || "---";
+
+            let summary = state.map(i => `${i.checked ? '✅' : '❌'} ${i.text}`).join('\n');
+            
+            const msg = `*--- דוח חפיפה מבצעי: RAMBO ---*\n📍 *משימה:* ${mName}\n⏰ *זמן:* ${mDate} | ${mTime}\n\n*סטטוס ציר קשר:*\n${summary}\n\n📝 *הערות:* ${mNotes}\n\n👤 *קשר יוצא:* ${sOut}\n👤 *קשר נכנס:* ${sIn}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
